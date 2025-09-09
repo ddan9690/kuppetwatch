@@ -15,7 +15,7 @@
         <!-- Overlay Content -->
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-4" data-aos="fade-up">
-                Raphael 2
+                Ago Raphael 
             </h1>
             
             <p class="text-lg md:text-2xl text-gray-200 mb-6 max-w-2xl" data-aos="fade-up" data-aos-delay="200">
@@ -37,7 +37,7 @@
         <div class="container mx-auto px-4 md:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">About Raphael</h2>
             <p class="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
-                Raphael 2 is dedicated to promoting the welfare of teachers, ensuring transparency, 
+                Ago Raphael is dedicated to promoting the welfare of teachers, ensuring transparency, 
                 and fostering unity within the KUPPET community. With experience, integrity, and vision, 
                 he aims to represent the voice of every teacher in Homa Bay and drive meaningful change.
             </p>
