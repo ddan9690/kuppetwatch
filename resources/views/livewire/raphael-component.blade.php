@@ -7,7 +7,7 @@
 
         <!-- Top-right Logo -->
         <div class="absolute top-4 right-4 md:top-8 md:right-8">
-            <img src="{{ asset('images/kuppetwatch.png') }}" 
+            <img src="{{ asset('images/raphael/kuppet-logo.jpeg') }}" 
                  alt="KUPPET Logo" 
                  class="w-20 md:w-28 h-auto rounded shadow-lg">
         </div>
