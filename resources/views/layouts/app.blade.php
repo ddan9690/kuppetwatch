@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'KUPPETWatch')</title>
 
-     <!-- Favicons -->
-     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
-     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">
-     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
-     <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
-     <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
+    <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon">
 
     <!-- Tailwind CSS -->
     @vite('resources/css/app.css')
@@ -27,11 +27,10 @@
     <!-- Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    
 </head>
 <body class="bg-kuppet-white text-kuppet-text font-sans min-h-screen flex flex-col">
 
-    {{-- Header / Navigation --}}
+    {{-- Navigation --}}
     @include('partials.nav')
 
     {{-- Main Content --}}
@@ -40,17 +39,13 @@
     </main>
 
     {{-- Footer --}}
-    <footer class="bg-kuppet-green-dark text-kuppet-white py-6 mt-16">
-        <div class="container mx-auto text-center">
-            &copy; {{ date('Y') }} KUPPETWatch. All rights reserved.
-        </div>
-    </footer>
+    @include('partials.footer')
 
     {{-- Initialize AOS --}}
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             AOS.init({
-                once: true, // animations happen only once
+                once: true,
                 duration: 800,
                 easing: 'ease-in-out',
             });
