@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './resources/**/*.blade.php',
-    './resources/**/*.js',
-    './resources/**/*.vue',
-    './resources/**/*.php', // include Livewire components
+    './resources/**/*.blade.php', // All Blade views
+    './resources/**/*.js',        // JS files
+    './resources/**/*.vue',       // Vue files (if any)
+    './app/Http/Livewire/**/*.php', // Livewire components in app folder
   ],
   theme: {
     extend: {
