@@ -27,6 +27,7 @@
     <!-- Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    
 </head>
 <body class="bg-kuppet-white text-kuppet-text font-sans min-h-screen flex flex-col">
 
