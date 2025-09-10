@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeComponent::class)->name('home');
 Route::get('/test', TestComponent::class)->name('home');
 Route::get('/raphael', RaphaelComponent::class)->name('raphael.component');
+Route::get('/raphael/5-point-agenda', RaphaelComponent::class)->name('raphael.agenda');
