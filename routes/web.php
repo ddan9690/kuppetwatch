@@ -19,4 +19,4 @@ Route::get('/test', TestComponent::class)->name('home');
 Route::get('/raphael', RaphaelComponent::class)->name('raphael.component');
 Route::get('/raphael/5-point-agenda', RaphaelComponent::class)->name('raphael.agenda');
 Route::get('/campaign/atanga-kennedy', AtangaComponent::class)->name('atanga.component');
-Route::get('/campaign/eunice-ouru-borrowed-disability-drama', EuniceOuruComponent::class)->name('eunice.component');
+Route::get('/campaign/kuppet-homabay-elections-the-drama-of-borrowed-disability-and-outright-inability', EuniceOuruComponent::class)->name('eunice.component');
