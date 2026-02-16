@@ -33,6 +33,7 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body class="bg-kuppet-white text-kuppet-text font-sans min-h-screen flex flex-col">
