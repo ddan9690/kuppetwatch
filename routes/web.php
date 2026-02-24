@@ -9,6 +9,7 @@ use App\Livewire\FirstToMarch;
 use App\Livewire\HomeComponent;
 use App\Livewire\NyanzaResultsComponent;
 use App\Livewire\RaphaelComponent;
+use App\Livewire\Support;
 use App\Livewire\TeamChangeComponent;
 use App\Livewire\TestComponent;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,4 @@ Route::get('/kuppet-homabay-elections-1st-march', FirstToMarch::class)
     ->name('kuppet.homabay.march.elections');
 
 Route::get('/team-change-kuppet-homabay', Candidates::class)->name('candidates');
+Route::get('/fuel-the-change-stand-for-teachers', Support::class)->name('support');
