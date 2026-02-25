@@ -606,7 +606,7 @@
 
             <p class="payment-note">
                 Use <strong style="color: #f0ede4;">Account No. 8034905</strong> as your account number.<br>
-                Your contribution, at any amount, is a vote of confidence in what we're building together.
+                Your contribution, at any amount, is a vote of confidence in what we're building together. Thank you.
             </p>
         </div>
     </section>
