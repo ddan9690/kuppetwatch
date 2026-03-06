@@ -27,13 +27,19 @@
     <!-- Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    
-    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- GSAP & ScrollTrigger for Parallax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 </head>
 <body class="bg-kuppet-white text-kuppet-text font-sans min-h-screen flex flex-col">
@@ -62,5 +68,28 @@
 
     <!-- Livewire Scripts -->
     @livewireScripts
+
+    <!-- GSAP Parallax Example -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Parallax effect on images with class .parallax
+            gsap.utils.toArray('.parallax').forEach((el) => {
+                gsap.to(el, {
+                    yPercent: 20, // move 20% vertically
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top bottom', 
+                        end: 'bottom top',
+                        scrub: true,
+                    }
+                });
+            });
+        });
+    </script>
+
+    @stack('scripts')
 </body>
 </html>
