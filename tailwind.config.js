@@ -1,28 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './resources/**/*.blade.php',       // All Blade views
-    './resources/**/*.js',              // JS files
-    './resources/**/*.vue',             // Vue files (if any)
-    './app/Http/Livewire/**/*.php',     // Livewire components in app folder
+    './resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.vue',
+    './app/Http/Livewire/**/*.php',
   ],
   theme: {
     extend: {
       colors: {
-        // Greens
-        'kuppet-green': '#3D782D',
-        'kuppet-green-light': '#A9DB9E',
-        'kuppet-green-dark': '#1F3C17',
+        primary: {
+          DEFAULT: '#0AA04F',
+          light: '#3BC374',
+          dark: '#067A3B',
+        },
 
-        // Yellow / Gold
-        'kuppet-yellow': '#FFD700',        // classic bright yellow
-        'kuppet-yellow-light': '#FFF3B0',  // light/yellow highlight
-        'kuppet-yellow-dark': '#C9A100',   // darker/mustard yellow
+        secondary: {
+          DEFAULT: '#CFAA6B',
+          light: '#E5CFA3',
+          dark: '#A8864F',
+        },
 
-        // Other
-        'kuppet-gold': '#C3912E',
-        'kuppet-white': '#FFFFFF',
-        'kuppet-text': '#2D2F34',
+        text: '#2D2F34',
+        background: '#F8FAF9',
       },
     },
   },

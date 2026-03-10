@@ -2,94 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'KUPPETWatch')</title>
 
-    <!-- Favicons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@yield('title', 'KUPPET Homa Bay Branch')</title>
+
+    {{-- Favicons --}}
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
     <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.ico') }}" type="image/x-icon">
 
-    <!-- Tailwind CSS -->
+    {{-- Tailwind --}}
     @vite('resources/css/app.css')
 
-    <!-- Livewire Styles -->
+    {{-- Livewire --}}
     @livewireStyles
 
-    <!-- Alpine.js -->
+    {{-- Alpine --}}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <!-- Boxicons -->
+    {{-- Icons --}}
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <!-- Animate On Scroll -->
+    {{-- AOS --}}
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-    <!-- Swiper CSS -->
+    {{-- Swiper --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <!-- Chart.js -->
+    {{-- Chart.js --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- GSAP & ScrollTrigger for Parallax -->
+    {{-- GSAP --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 </head>
-<body class="bg-kuppet-white text-kuppet-text font-sans min-h-screen flex flex-col">
+
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col antialiased">
 
     {{-- Navigation --}}
     @include('partials.nav')
 
-    {{-- Main Content --}}
+    {{-- Page Content --}}
     <main class="flex-grow">
+
         {{ $slot ?? '' }}
+
     </main>
 
     {{-- Footer --}}
     @include('partials.footer')
 
-    {{-- Initialize AOS --}}
+
+
+    {{-- AOS Init --}}
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
             AOS.init({
                 once: true,
                 duration: 800,
                 easing: 'ease-in-out',
+                offset: 100
             });
+
         });
     </script>
 
-    <!-- Livewire Scripts -->
-    @livewireScripts
 
-    <!-- GSAP Parallax Example -->
+
+    {{-- GSAP Parallax --}}
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
             gsap.registerPlugin(ScrollTrigger);
 
-            // Parallax effect on images with class .parallax
             gsap.utils.toArray('.parallax').forEach((el) => {
+
                 gsap.to(el, {
-                    yPercent: 20, // move 20% vertically
+                    yPercent: 20,
                     ease: 'none',
                     scrollTrigger: {
                         trigger: el,
-                        start: 'top bottom', 
+                        start: 'top bottom',
                         end: 'bottom top',
-                        scrub: true,
+                        scrub: true
                     }
                 });
+
             });
+
         });
     </script>
 
+
+
+    {{-- Livewire --}}
+    @livewireScripts
+
+    {{-- Extra Scripts --}}
     @stack('scripts')
+
 </body>
 </html>
