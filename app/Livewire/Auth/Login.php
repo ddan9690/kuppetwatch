@@ -4,6 +4,7 @@ namespace App\Livewire\Auth;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class Login extends Component
 {
@@ -28,14 +29,16 @@ class Login extends Component
 
             $user = auth()->user();
 
-            if ($user->hasRole('super admin')) {
+            // Redirect based on Gates
+            if (Gate::allows('super-admin')) {
                 return redirect()->route('super.dashboard');
             }
 
-            if ($user->hasRole('admin')) {
+            if (Gate::allows('admin')) {
                 return redirect()->route('admin.dashboard');
             }
 
+            // Default to normal user
             return redirect()->route('user.dashboard');
         }
 

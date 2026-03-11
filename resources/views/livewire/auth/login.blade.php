@@ -46,7 +46,7 @@
                 class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-dark transition"
             >
                 <span wire:loading.remove>Login</span>
-                <span wire:loading>Authenticating...</span>
+                <span wire:loading>Please wait...</span>
             </button>
         </form>
 
